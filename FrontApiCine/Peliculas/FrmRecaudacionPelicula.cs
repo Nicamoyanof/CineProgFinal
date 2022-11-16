@@ -24,9 +24,9 @@ namespace CineProyectoUTN.Formularios
             InitializeComponent();
         }
 
-        private void FrmRecaudacionPelicula_Load(object sender, EventArgs e)
+        private async void FrmRecaudacionPelicula_Load(object sender, EventArgs e)
         {
-            CargarPeliculasRecaudacionAsync();
+           await CargarPeliculasRecaudacionAsync();
         }
 
         public async Task CargarPeliculasRecaudacionAsync()

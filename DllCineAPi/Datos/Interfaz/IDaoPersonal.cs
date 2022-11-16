@@ -12,6 +12,8 @@ namespace DllCineApi.Datos.Interfaz
         List<Personal> ObtenerPersonal();
         List<Ciudades> ObtenerCiudades();
         List<TiposCargos> ObtenerCargos();
+
+        Personal ObtenerPersonalById(int id);
         bool Crear(Personal personal);
         bool Actualizar(Personal personal, int id);
         bool Borrar(int nro);

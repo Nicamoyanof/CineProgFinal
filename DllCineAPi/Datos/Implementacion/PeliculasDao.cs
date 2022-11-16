@@ -7,6 +7,7 @@ using System.Data;
 using DllCineApi.Dominios;
 using DllCineApi.Datos;
 using DllCineApi.Datos.Interfaz;
+using DllCineApi.Utils;
 
 namespace DllCineApi.Datos.Implementacion
 {

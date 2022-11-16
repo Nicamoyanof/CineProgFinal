@@ -11,10 +11,11 @@ namespace DllCineApi.Fachada.Interfaz
     public interface ITickets
     {
         public List<Tickets> ObtenerTickets();
-        public List<Clientes> ObtenerClientes();
-        public List<Personal> ObtenerPersonal();
+        public bool Crear(Tickets tickets);
+        //public List<Clientes> ObtenerClientes();
+        //public List<Personal> ObtenerPersonal();
         
-        public List<Reservas> ObtenerReservas();
+        //public List<Reservas> ObtenerReservas();
 
 
     }

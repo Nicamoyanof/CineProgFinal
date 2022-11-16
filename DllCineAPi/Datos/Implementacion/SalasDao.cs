@@ -12,6 +12,33 @@ namespace DllCineApi.Datos.Implementacion
 {
     public class SalasDao : IDaoSalas
     {
+        public List<Asientos> CargarAsientosOcupados(int idFunc)
+        {
+            DataTable table = Helper.ObtenerInstancia().ConsultarSQLScript($"SELECT dt.id_asiento_sala 'asientos' FROM tickets t join Funciones f on f.id_funcion = t.id_funcion join Detalles_Tickets dt on dt.id_ticket = t.id_ticket  where f.id_funcion = {idFunc}");
+
+            List<Asientos> lAsientos = new List<Asientos>();
+
+            for (int i = 0; i < 20; i++)
+            {
+
+                Asientos asiento = new Asientos(i + 1, true);
+
+                foreach (DataRow dr in table.Rows)
+                {
+
+                    if (int.Parse(dr["asientos"].ToString()).Equals(i + 1))
+                    {
+                        asiento.Disponible = false;
+                        break;
+                    }
+                }
+                lAsientos.Add(asiento);
+
+            }
+
+            return lAsientos;
+        }
+
         public Salas CargarSalaPorId(int id)
         {
             DataTable salas = Helper.ObtenerInstancia().ConsultarSQLScript("SELECT * FROM Salas WHERE id_sala =" + id);
@@ -20,8 +47,7 @@ namespace DllCineApi.Datos.Implementacion
             {
                 sala.TipoSala = CargarTipoSalas()[Convert.ToInt32(dr["id_tipo_sala"].ToString()) - 1];
                 sala.NumeroSala = Convert.ToInt32(dr["numero_sala"].ToString());
-                sala.LstAsientos = new List<Asientos>();
-
+                sala.IdSala = int.Parse(dr["id_sala"].ToString());
             }
             return sala;
         }
@@ -45,5 +71,26 @@ namespace DllCineApi.Datos.Implementacion
             return lTipoSalas;
 
         }
+
+        public List<Salas> CargarSalas()
+        {
+            DataTable table = Helper.ObtenerInstancia().ConsultarSQLScript("SELECT * FROM salas");
+
+            List<Salas> lSala = new List<Salas>();
+
+            foreach (DataRow dr in table.Rows)
+            {
+                Salas sala = new Salas();
+                sala.TipoSala = CargarTipoSalas()[Convert.ToInt32(dr["id_tipo_sala"].ToString()) - 1];
+                sala.NumeroSala = Convert.ToInt32(dr["numero_sala"].ToString());
+                sala.IdSala = int.Parse(dr["id_sala"].ToString());
+
+                lSala.Add(sala);
+            }
+
+            return lSala;
+
+        }
+
     }
 }

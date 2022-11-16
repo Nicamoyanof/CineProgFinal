@@ -25,6 +25,7 @@ namespace DllCineApi.Dominios
             EdadMinima = new EdadesPermitidas();
             Genero = new GeneroPelicula();
             Descripcion = "sin descripcion";
+            NombrePoster = "sin nombre";
         }
         public int IdPelicula { get; set; }
         public string Nombre { get; set; }

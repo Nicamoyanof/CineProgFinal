@@ -14,22 +14,27 @@ namespace DllCineApi.Dominios
         public Personal Personal { get; set; }
         public Clientes Clientes { get; set; }
         public DateTime fecha_ticket { get; set; }
+        public List<DetallesTickets> DetallesTickets { get; set; }
 
-        public Tickets(Reservas reservas, Funciones funciones, Personal personal, Clientes clientes,DateTime fecha)
+        public Tickets(int id, Reservas reservas, Funciones funciones, Personal personal, Clientes clientes,DateTime fecha, List<DetallesTickets> detallesTickets)
         {
+            id_ticket = id;
             Reservas = reservas;
             Funciones = funciones;
             Personal = personal;
             Clientes = clientes;
             fecha_ticket = fecha;
+            DetallesTickets = detallesTickets;
         }
         public Tickets()
         {
+            id_ticket = 0;
             Reservas = new Reservas();
             Funciones = new Funciones();
             Personal = new Personal();
             Clientes = new Clientes();
             fecha_ticket = DateTime.Now;
+            DetallesTickets = new List<DetallesTickets>();
         }
     }
 }

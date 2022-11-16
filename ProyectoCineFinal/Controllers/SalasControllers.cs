@@ -9,6 +9,7 @@ using ApiRestCine;
 
 namespace ApiRestCine.Controllers
 {
+    [ApiController]
     public class SalasControllers : Controller
     {
 
@@ -38,6 +39,22 @@ namespace ApiRestCine.Controllers
             }
         }
 
+        [HttpGet("/salas")]
+        public IActionResult GetSalas()
+        {
+            List<Salas> lst = null;
+            try
+            {
+                lst = daoSalas.CargarSalas();
+                return Ok(lst);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno! Intente luego");
+            }
+        }
+
         [HttpGet("/salas-by-id/{id}")]
         public IActionResult GetSalasById(int id)
         {
@@ -46,6 +63,21 @@ namespace ApiRestCine.Controllers
             {
                 sala = daoSalas.CargarSalaPorId(id);
                 return Ok(sala);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno! Intente luego");
+            }
+        }
+
+        [HttpGet("/asientos-ocupaoas-by-func/{id}")]
+        public IActionResult GetAsientosOcupadosByFunc(int id)
+        {
+            try
+            {
+                List<Asientos> lAsientos = daoSalas.CargarAsientosOcupados(id);
+                return Ok(lAsientos);
 
             }
             catch (Exception ex)

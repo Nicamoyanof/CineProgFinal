@@ -14,9 +14,11 @@ namespace DllCineApi.Dominios
             Pelicula = new Peliculas();
             FechaReserva = DateTime.Now;
             HoraConfirmacion = DateTime.Now;
+            id_reserva = 1;
         }
 
         public Clientes cliente { get; set; }
+        public int id_reserva { get; set; }
         public Peliculas Pelicula { get; set; }
         public DateTime FechaReserva { get; set; }
         public DateTime HoraConfirmacion { get; set; }

@@ -9,14 +9,16 @@ namespace DllCineApi.Dominios
     public class GeneroPelicula
     {
 
-        public GeneroPelicula(string nombre, string descripcion)
+        public GeneroPelicula(int idGenero, string nombre, string descripcion)
         {
+            IdGeneroPelicula = idGenero;
             Nombre = nombre;
             Descripcion = descripcion;
         }
 
         public GeneroPelicula()
         {
+            IdGeneroPelicula = 0;
             Nombre = "sin nombre";
             Descripcion = "sin descripcion";
         }

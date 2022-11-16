@@ -2,12 +2,14 @@
 using DllCineApi.Fachada.Interfaz;
 using DllCineApi.Fachada.Implementacion;
 using DllCineApi.Dominios;
+using DllCineApi.Utils;
 using System.Data;
 using ApiRestCine;
 
 
 namespace ApiRestCine.Controllers
 {
+    [ApiController]
     public class PeliculasControllers : Controller
     {
         private IPeliculasApi daoPeliculas; //punto de acceso a la API
@@ -117,6 +119,7 @@ namespace ApiRestCine.Controllers
                 return StatusCode(500, "Error interno! Intente luego");
             }
         }
+
 
         [HttpPut("/pelicula/{id}")]
         public IActionResult PutPelicula(Peliculas peliculas, int id)

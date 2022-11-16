@@ -20,10 +20,19 @@ namespace DllCineApi.Fachada.Implementacion
             daoSala = new SalasDao();
         }
 
+        public List<Asientos> CargarAsientosOcupados(int idFunc)
+        {
+            return daoSala.CargarAsientosOcupados(idFunc);
+        }
 
         public Salas CargarSalaPorId(int id)
         {
             return daoSala.CargarSalaPorId(id);
+        }
+
+        public List<Salas> CargarSalas()
+        {
+            return daoSala.CargarSalas();
         }
 
         public List<TipoSala> CargarTipoSalas()

@@ -14,10 +14,10 @@ namespace DllCineApi.Datos.Interfaz
         bool Actualizar(Tickets oTickets);
         bool Borrar(int nro);
 
-        List<Clientes> ObtenerClientes();
-        List<Personal> ObtenerPersonal();
+        //List<Clientes> ObtenerClientes();
+        //List<Personal> ObtenerPersonal();
         
-        List<Reservas> ObtenerReservas();
+        //List<Reservas> ObtenerReservas();
 
 
   

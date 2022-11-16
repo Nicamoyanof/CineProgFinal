@@ -60,6 +60,9 @@ namespace CineProyectoUTN
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            EstiloBotones();
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
             if (FrmLogin.instancia.ShowDialog() == DialogResult.OK)
             {
                 this.Show();
@@ -69,5 +72,26 @@ namespace CineProyectoUTN
                 Close();
             }
         }
+
+        private void EstiloBotones()
+        {
+
+            List<Button> lButtons = new List<Button>();
+            lButtons.Add(btnPersonal);
+            lButtons.Add(btnCliente);
+            lButtons.Add(btnPelicula);
+            lButtons.Add(btnVentas);
+            lButtons.Add(btnFuncion);
+
+            foreach (Button btn in lButtons)
+            {
+                btn.TabStop = false;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+            }
+
+            
+        }
+
     }
 }

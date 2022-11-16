@@ -9,6 +9,7 @@ using DllCineApi.Datos;
 
 namespace ApiRestCine.Controllers
 {
+    [ApiController]
     public class PersonalControllers : Controller
     {
         private IPersonalApi daoPersonal; //punto de acceso a la API

@@ -8,6 +8,7 @@ using ApiRestCine;
 
 namespace ApiRestCine.Controllers
 {
+    [ApiController]
     public class FuncionesControllers : Controller
     {
 

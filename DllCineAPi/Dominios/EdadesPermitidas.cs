@@ -17,6 +17,7 @@ namespace DllCineApi.Dominios
         }
         public EdadesPermitidas()
         {
+            IdEdadMinima = 0;
             Nombre = "sin nombre";
             Edad = 0;
         }

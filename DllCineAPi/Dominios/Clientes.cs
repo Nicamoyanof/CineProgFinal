@@ -10,7 +10,6 @@ namespace DllCineApi.Dominios
     {
         public int Id_Cliente { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
         public DateTime FechaNac { get; set; }
         public string Email { get; set; }
         public bool Socio { get; set; }
@@ -19,7 +18,6 @@ namespace DllCineApi.Dominios
         {
             Id_Cliente = 0;
             Nombre = String.Empty;
-            Apellido = String.Empty;
             FechaNac = DateTime.Now;
             Email = String.Empty; ;
             Socio = true;
@@ -27,7 +25,7 @@ namespace DllCineApi.Dominios
         }
         public override string ToString()
         {
-            return Apellido + " " + Nombre;
+            return Nombre;
         }
 
 

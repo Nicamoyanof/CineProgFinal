@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DllCineApi.Dominios;
+using DllCineApi.Utils;
 using System.Data;
 
 namespace DllCineApi.Datos.Interfaz

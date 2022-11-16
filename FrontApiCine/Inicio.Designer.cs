@@ -31,11 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPersonal = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnPelicula = new System.Windows.Forms.Button();
+            this.btnFuncion = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,15 +42,20 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(167, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(167, 127);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 242);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // btnPersonal
             // 
+            this.btnPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(30)))), ((int)(((byte)(38)))));
+            this.btnPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPersonal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPersonal.ForeColor = System.Drawing.Color.White;
             this.btnPersonal.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonal.Image")));
             this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonal.Location = new System.Drawing.Point(22, 127);
@@ -61,90 +65,95 @@
             this.btnPersonal.TabIndex = 1;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPersonal.UseVisualStyleBackColor = true;
+            this.btnPersonal.UseVisualStyleBackColor = false;
             this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
             // 
-            // button7
+            // btnCliente
             // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(22, 219);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(137, 59);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Clientes";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(30)))), ((int)(((byte)(38)))));
+            this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(22, 219);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(137, 59);
+            this.btnCliente.TabIndex = 7;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button2
+            // btnPelicula
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(22, 310);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 59);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Peliculas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPelicula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(30)))), ((int)(((byte)(38)))));
+            this.btnPelicula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPelicula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPelicula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPelicula.ForeColor = System.Drawing.Color.White;
+            this.btnPelicula.Image = ((System.Drawing.Image)(resources.GetObject("btnPelicula.Image")));
+            this.btnPelicula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPelicula.Location = new System.Drawing.Point(22, 310);
+            this.btnPelicula.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPelicula.Name = "btnPelicula";
+            this.btnPelicula.Size = new System.Drawing.Size(137, 59);
+            this.btnPelicula.TabIndex = 8;
+            this.btnPelicula.Text = "Peliculas";
+            this.btnPelicula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPelicula.UseVisualStyleBackColor = false;
+            this.btnPelicula.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnFuncion
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(675, 310);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 59);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Reservas";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnFuncion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(30)))), ((int)(((byte)(38)))));
+            this.btnFuncion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFuncion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFuncion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFuncion.ForeColor = System.Drawing.Color.White;
+            this.btnFuncion.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncion.Image")));
+            this.btnFuncion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncion.Location = new System.Drawing.Point(675, 219);
+            this.btnFuncion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFuncion.Name = "btnFuncion";
+            this.btnFuncion.Size = new System.Drawing.Size(137, 59);
+            this.btnFuncion.TabIndex = 10;
+            this.btnFuncion.Text = "Funcion";
+            this.btnFuncion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFuncion.UseVisualStyleBackColor = false;
+            this.btnFuncion.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button8
+            // btnVentas
             // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(675, 219);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(137, 59);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Funcion";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(675, 127);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(137, 59);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Ventas";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(30)))), ((int)(((byte)(38)))));
+            this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVentas.ForeColor = System.Drawing.Color.White;
+            this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(675, 127);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(137, 59);
+            this.btnVentas.TabIndex = 9;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.button9_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(41)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(834, 511);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnFuncion);
+            this.Controls.Add(this.btnVentas);
+            this.Controls.Add(this.btnPelicula);
+            this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnPersonal);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -164,10 +173,9 @@
 
         private PictureBox pictureBox1;
         private Button btnPersonal;
-        private Button button7;
-        private Button button2;
-        private Button button3;
-        private Button button8;
-        private Button button9;
+        private Button btnCliente;
+        private Button btnPelicula;
+        private Button btnFuncion;
+        private Button btnVentas;
     }
 }

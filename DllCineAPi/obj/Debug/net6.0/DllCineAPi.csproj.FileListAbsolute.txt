@@ -1,12 +1,24 @@
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\bin\Debug\net6.0\DllCineAPi.deps.json
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\bin\Debug\net6.0\DllCineAPi.dll
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\bin\Debug\net6.0\DllCineAPi.pdb
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.csproj.AssemblyReference.cache
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.AssemblyInfoInputs.cache
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.AssemblyInfo.cs
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.dll
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\refint\DllCineAPi.dll
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\DllCineAPi.pdb
-C:\Users\Usuario\source\repos\ProyectoCineFinal\DllCineAPi\obj\Debug\net6.0\ref\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\bin\Debug\net6.0\DllCineAPi.deps.json
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\bin\Debug\net6.0\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\bin\Debug\net6.0\DllCineAPi.pdb
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.csproj.AssemblyReference.cache
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.AssemblyInfoInputs.cache
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.AssemblyInfo.cs
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.csproj.CoreCompileInputs.cache
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\refint\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.pdb
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\ref\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\bin\Debug\net6.0\DllCineAPi.deps.json
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\bin\Debug\net6.0\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\bin\Debug\net6.0\DllCineAPi.pdb
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.csproj.AssemblyReference.cache
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.AssemblyInfoInputs.cache
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.AssemblyInfo.cs
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.csproj.CoreCompileInputs.cache
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\refint\DllCineAPi.dll
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\DllCineAPi.pdb
+D:\Usuario\Nicanor\no borrar\UTN\1ER AÑO\2do CUATRIMESTRE\PROGAMACION II\proyecto cine\otro rar mas\ProyectoCineFinal1.0\ProyectoCineFinal1\DllCineAPi\obj\Debug\net6.0\ref\DllCineAPi.dll

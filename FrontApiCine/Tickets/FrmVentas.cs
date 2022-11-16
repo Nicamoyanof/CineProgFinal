@@ -20,6 +20,11 @@ namespace CineProyectoUTN.Formularios
     {
 
         List<Tickets> lTickets = new List<Tickets>();
+        Tickets ticketsSeleccionada = new Tickets();
+        List<Asientos> lAsientos = new List<Asientos>();
+        List<Funciones> lFunciones = new List<Funciones>();
+        List<Personal> lPersonal = new List<Personal>();
+        List<Clientes> lClientes = new List<Clientes>();
 
 
         public FrmVentas()
@@ -29,7 +34,7 @@ namespace CineProyectoUTN.Formularios
 
         }
 
-        private void FrmVentas_Load(object sender, EventArgs e)
+        private async void FrmVentas_Load(object sender, EventArgs e)
         {
             //cargarCbo(cboFuncion, "SELECT * FROM Funciones", "horario", "id_funcion");
             //cargarCbo(cboCliente, "SELECT * FROM Clientes", "apellido", "id_cliente");
@@ -37,24 +42,49 @@ namespace CineProyectoUTN.Formularios
             //cargarCbo(cboFormaPago, "SELECT * FROM Tipos_Pagos", "nombre_tipo_pago", "id_tipo_pago");
             //cargarTickets();
 
-            cargarFuncionesAsync();
-            cargarClientesAsync();
-            CargarDgvAsync();
+            await cargarFuncionesAsync();
+            await cargarClientesAsync();
+            await CargarDgvAsync();
+            await CargarEmpleadoAsync();
             habilitar(true);
-
+            menuStrip1.BackColor = Color.FromArgb(224, 30, 38);
+            menuStrip1.ForeColor = Color.White;
         }
 
         private void habilitar(bool v)
         {
-            cboCliente.Enabled = !v;
-            cboEmpleado.Enabled = !v;
-            cboFormaPago.Enabled = !v;
-            cboFuncion.Enabled = !v;
-            txtPrecioEntrada.Enabled = !v;
-            dtpFechaPago.Enabled = !v;
-            nupTickets.Enabled = !v;
+            cboCliente.Enabled = v;
+            cboEmpleado.Enabled = v;
+            cboFormaPago.Enabled = v;
+            cboFuncion.Enabled = v;
+            txtPrecioEntrada.Enabled = v;
+            dtpFechaPago.Enabled = v;
+            nupTickets.Enabled = v;
+            //btnAgregar.Enabled = !v;
+            //btnBorrar.Enabled = !v;
+            //btnEditar.Enabled = !v;
 
         }
+
+        private async Task CargarEmpleadoAsync()
+        {
+            var result = await ClientSingleton.GetInstance().GetAsync("http://localhost:7046/personal");
+            var lst = JsonConvert.DeserializeObject<List<Personal>>(result);
+
+            if (lst != null)
+            {
+                foreach (var item in lst)
+                {
+                    lPersonal.Add(item);
+                }
+            }
+
+            cboEmpleado.DataSource = lPersonal;
+            cboEmpleado.ValueMember = "IdEmpleado";
+            cboEmpleado.DisplayMember = "Nombre";
+
+        }
+
         private async Task CargarDgvAsync()
         {
             //List<Tickets> lTickets = dao.ObtenerTickets();
@@ -66,10 +96,19 @@ namespace CineProyectoUTN.Formularios
             {
                 foreach (var ticket in lst)
                 {
-                    Tickets tkt = new Tickets(new Reservas(), ticket.Funciones, ticket.Personal, ticket.Clientes, ticket.fecha_ticket);
-                    lTickets.Add(tkt);
+                    lTickets.Add(ticket);
 
-                    dgvTickets.Rows.Add(ticket.Clientes, ticket.Personal, ticket.Funciones, ticket.fecha_ticket);
+                    dgvTickets.Rows.Add(ticket.Clientes.ToString(), ticket.Personal.ToString(), ticket.Funciones, ticket.fecha_ticket, "Efectivo" );
+                }
+            }
+
+            for (int i = 0; i < dgvTickets.Rows.Count; i++)
+            {
+                dgvTickets.Rows[i].DefaultCellStyle.ForeColor = Color.Black;
+                if (i % 2 == 0)
+                {
+                    dgvTickets.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+
                 }
             }
         }
@@ -82,10 +121,11 @@ namespace CineProyectoUTN.Formularios
             if (lst != null)
             {
 
-
                 foreach (Clientes cliente in lst)
                 {
                     cboCliente.Items.Add(cliente.ToString());
+                    lClientes.Add(cliente);
+
                 }
             }
         }
@@ -99,7 +139,8 @@ namespace CineProyectoUTN.Formularios
             {
                 foreach (Funciones funcion in lst)
                 {
-                    cboFuncion.Items.Add(funcion.ToString());
+                    cboFuncion.Items.Add(funcion.ToString() );
+                    lFunciones.Add(funcion);
                 }
             }
         }
@@ -183,6 +224,201 @@ namespace CineProyectoUTN.Formularios
 
             txtPrecioFinal.Text = (nupTickets.Value * int.Parse(txtPrecioEntrada.Text)).ToString();
 
+        }
+
+        private async Task AsientosVaciosAsync(int id)
+        {
+            lAsientos.Clear();
+
+            var result = await ClientSingleton.GetInstance().GetAsync($"http://localhost:7046/asientos-ocupaoas-by-func/{id}");
+            var lst = JsonConvert.DeserializeObject<List<Asientos>>(result);
+
+            if (lst != null)
+            {
+
+                foreach (var item in lst)
+                {
+                    Asientos asiento = item as Asientos;
+                    if (asiento.Disponible)
+                    {
+                        lAsientos.Add(asiento);
+                    }
+                }
+            }
+        }
+
+        public async Task AgregarTicketAsync(Tickets ticket)
+        {
+            string bodyContent = JsonConvert.SerializeObject(ticket);
+
+            string url = "http://localhost:7046/ticket";
+            var result = await ClientSingleton.GetInstance().PostAsync(url, bodyContent);
+
+            if (result.Equals("true"))//servicio.CrearPresupuesto(nuevo)
+            {
+                MessageBox.Show("Ticket agregado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("ERROR. No se pudo registrar el ticket", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            habilitar(true);
+
+            if (VerificarCampos())
+            {
+                Tickets ticket = new Tickets();
+                ticket.Clientes = lClientes[cboCliente.SelectedIndex];
+                ticket.Personal = lPersonal[cboEmpleado.SelectedIndex];
+                ticket.Funciones = lFunciones[cboFuncion.SelectedIndex];
+                ticket.fecha_ticket = dtpFechaPago.Value;
+                ticket.Reservas = new Reservas();
+
+                List<DetallesTickets> dtList = new List<DetallesTickets>();
+
+                for (int i = 0; i < nupTickets.Value; i++)
+                {
+                    Tipos_pagos tp = new Tipos_pagos();
+                    tp.id_tipo_pago = cboFormaPago.SelectedIndex;
+
+                    DetallesTickets dt = new DetallesTickets(0, 0, tp, float.Parse(txtPrecioEntrada.Text), 1, lAsientos[i]);
+                    dtList.Add(dt);
+
+                }
+                ticket.DetallesTickets = dtList;
+
+                await AgregarTicketAsync(ticket);
+
+                await CargarTicketsAsync();
+
+            }
+
+        }
+
+        private bool VerificarCampos()
+        {
+
+
+            List<bool> lVerificado = new List<bool>();
+
+
+            lVerificado.Add(txtPrecioEntrada.Text == "" ? false : true);
+            lVerificado.Add(cboCliente.SelectedIndex < 1 ? false : true);
+            lVerificado.Add(cboEmpleado.SelectedIndex < 1 ? false : true);
+            lVerificado.Add(cboFormaPago.SelectedIndex < 1 ? false : true);
+            lVerificado.Add(cboFuncion.SelectedIndex < 1 ? false : true);
+            lVerificado.Add(nupTickets.Value <= lAsientos.Count());
+
+            foreach (bool verificar in lVerificado)
+            {
+                if (!verificar)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
+
+        }
+
+        private async void btnEditar_Click(object sender, EventArgs e)
+        {
+            ticketsSeleccionada.Clientes.Id_Cliente = cboCliente.SelectedIndex;
+            ticketsSeleccionada.Personal.IdEmpleado = cboEmpleado.SelectedIndex;
+            ticketsSeleccionada.Funciones.IdFuncion = cboFuncion.SelectedIndex;
+            ticketsSeleccionada.fecha_ticket = dtpFechaPago.Value;
+            //ticketsSeleccionada.Reservas.id_reserva=
+
+
+        }
+
+        private async Task CargarTicketsAsync()
+        {
+            dgvTickets.Rows.Clear();
+
+            var result = await ClientSingleton.GetInstance().GetAsync("http://localhost:7046/tickets");
+            var lst = JsonConvert.DeserializeObject<List<Tickets>>(result);
+
+            if (lst != null)
+            {
+
+                foreach (var tickets in lst)
+                {
+                    Tickets tkt = new Tickets(tickets.id_ticket, tickets.Reservas, tickets.Funciones, tickets.Personal, tickets.Clientes,  tickets.fecha_ticket,  tickets.DetallesTickets);
+                    lTickets.Add(tkt);
+                    dgvTickets.Rows.Add(tickets.Funciones, tickets.Clientes, tickets.Personal, tickets.fecha_ticket, tickets.Reservas);
+                }
+            }
+
+            for (int i = 0; i < dgvTickets.Rows.Count; i++)
+            {
+                dgvTickets.Rows[i].DefaultCellStyle.ForeColor = Color.Black;
+                if (i % 2 == 0)
+                {
+                    dgvTickets.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+
+                }
+            }
+        }
+
+        private async Task BorrarAsync()
+        {
+            if (MessageBox.Show("Esta seguro de borrar este ticket?", "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                string url = $"http://localhost:7046/ticket/{ticketsSeleccionada.id_ticket}";
+                var result = await ClientSingleton.GetInstance().DeleteAsync(url);
+
+                if (result == "true")
+                {
+                    MessageBox.Show("Ticket borrado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al borrar el ticket", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+
+        }
+
+        private async Task btnBorrar_ClickAsync(object sender, EventArgs e)
+        {
+            await BorrarAsync();
+            await CargarTicketsAsync();
+
+        }
+
+        private async void cboFuncion_DisplayMemberChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void cboFuncion_SelectedValueChanged(object sender, EventArgs e)
+        {
+            await AsientosVaciosAsync(lFunciones[cboFuncion.SelectedIndex].IdFuncion);
+            txtAsientosLibres.Text = lAsientos.Count().ToString();
+        }
+
+        private void nupTickets_ValueChanged(object sender, EventArgs e)
+        {
+            float precio = float.Parse(txtPrecioEntrada.Text);
+            float cant = (float)nupTickets.Value;
+
+            txtPrecioFinal.Text = (precio * cant).ToString();
+        }
+
+        private void txtPrecioEntrada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int precio;
+            int cant = (int)nupTickets.Value;
+            Int32.TryParse(txtPrecioEntrada.Text, out precio);
+
+            txtPrecioFinal.Text = (precio * cant).ToString();
         }
     }
 }

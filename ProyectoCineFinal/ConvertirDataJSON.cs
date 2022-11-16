@@ -11,6 +11,14 @@ namespace ApiRestCine
 
         }
 
+        public string Encriptar(string _cadenaAencriptar)
+        {
+            string result = string.Empty;
+            byte[] encryted =
+            System.Text.Encoding.Unicode.GetBytes(_cadenaAencriptar);
+            result = Convert.ToBase64String(encryted);
+            return result;
+        }
 
         public string DataTableToJSONWithStringBuilder(DataTable table)
         {

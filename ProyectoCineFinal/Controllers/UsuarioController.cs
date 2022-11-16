@@ -5,6 +5,7 @@ using DllCineAPi.Dominios;
 
 namespace ApiRestCine.Controllers
 {
+    [ApiController]
     public class UsuarioController : Controller
     {
         private IusuariosApi daoUsuario; //punto de acceso a la API
@@ -36,7 +37,7 @@ namespace ApiRestCine.Controllers
         public IActionResult PostUser(Usuarios user)
         {
             bool isCreated = false;
-            user.Password = Encriptar(user.Password);
+            user.Password = convertirDataJSON.Encriptar(user.Password);
             try
             {
                 isCreated = daoUsuario.AgregarUsuario(user);
@@ -66,14 +67,7 @@ namespace ApiRestCine.Controllers
             }
         }
 
-        public string Encriptar(string _cadenaAencriptar)
-        {
-            string result = string.Empty;
-            byte[] encryted =
-            System.Text.Encoding.Unicode.GetBytes(_cadenaAencriptar);
-            result = Convert.ToBase64String(encryted);
-            return result;
-        }
+        
 
         
 

@@ -13,5 +13,9 @@ namespace DllCineApi.Fachada.Interfaz
 
         public Salas CargarSalaPorId(int id);
 
+        public List<Asientos> CargarAsientosOcupados(int idFunc);
+
+        public List<Salas> CargarSalas();
+
     }
 }

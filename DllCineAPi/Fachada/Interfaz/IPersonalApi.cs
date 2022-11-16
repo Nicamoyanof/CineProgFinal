@@ -12,10 +12,11 @@ namespace DllCineApi.Fachada.Interfaz
     public interface IPersonalApi
     {
         public List<Personal> CargarPersonal();
+        public Personal ObtenerPersonalById(int id);
         public List<Ciudades> CargarCiudades();
         public List<TiposCargos> ObtenerCargos();
-        bool Crear(Personal personal);
-        bool Actualizar(Personal personal, int id);
-        bool Borrar(int nro);
+        public bool Crear(Personal personal);
+        public bool Actualizar(Personal personal, int id);
+        public bool Borrar(int nro);
     }
 }

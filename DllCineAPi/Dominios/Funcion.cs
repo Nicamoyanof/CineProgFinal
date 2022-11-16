@@ -29,5 +29,10 @@ namespace DllCineApi.Dominios
         public Salas Sala { get; set; }
         public DateTime Horario { get; set; }
 
+        public override string ToString()
+        {
+            return Pelicula.ToString() + " " + Horario;
+        }
+
     }
 }

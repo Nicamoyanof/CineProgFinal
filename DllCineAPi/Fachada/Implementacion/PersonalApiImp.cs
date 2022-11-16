@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DllCineApi.Dominios;
-using DllCineApi.Datos.Implementacion;
+using DllCineApi.Datos.Implementacion ;
 using DllCineApi.Datos.Interfaz;
 using DllCineApi.Fachada.Interfaz;
 
@@ -44,6 +44,11 @@ namespace DllCineApi.Fachada.Implementacion
         public bool Borrar(int nro)
         {
            return daoPersonal.Borrar(nro);
+        }
+
+        public Personal ObtenerPersonalById(int id)
+        {
+            return daoPersonal.ObtenerPersonalById(id);
         }
     }
 }

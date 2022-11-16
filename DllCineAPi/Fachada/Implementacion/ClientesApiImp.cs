@@ -49,4 +49,9 @@ public class ClientesApiImp : IClientesApi
     {
         return daoClientes.ObtenerCiudades();
     }
+
+    public Clientes ObtenerClienteById(int id)
+    {
+        return daoClientes.ObtenerClienteById(id);
+    }
 }

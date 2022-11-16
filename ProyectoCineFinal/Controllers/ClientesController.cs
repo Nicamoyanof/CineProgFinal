@@ -12,6 +12,7 @@ using DllCineApi.Datos.Interfaz;
 
 namespace ApiRestCine.Controllers
 {
+    [ApiController]
     public class ClientesController : Controller
     {
         private IClientesApi daoClientes; //punto de acceso a la API

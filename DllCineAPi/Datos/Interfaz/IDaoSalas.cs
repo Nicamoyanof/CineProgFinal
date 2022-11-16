@@ -16,5 +16,8 @@ namespace DllCineApi.Datos.Interfaz
 
         Salas CargarSalaPorId(int id);
 
+        List<Asientos> CargarAsientosOcupados(int idFunc);
+        List<Salas> CargarSalas();
+
     }
 }

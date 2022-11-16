@@ -20,24 +20,28 @@ namespace DllCineAPi.Fachada.Implementacion
             daoTickets = new TicketsDao();
         }
 
-    
+        public bool Crear(Tickets tickets)
+        {
+            return  daoTickets.Crear(tickets);
+        }
+
         public List<Tickets> ObtenerTickets()
         {
             return daoTickets.ObtenerTickets(); 
         }
-        public List<Clientes> ObtenerClientes()
-        {
-            return daoTickets.ObtenerClientes();
-        }
-        public List<Personal> ObtenerPersonal()
-        {
-            return daoTickets.ObtenerPersonal();
-        }
+        //public List<Clientes> ObtenerClientes()
+        //{
+        //    return daoTickets.ObtenerClientes();
+        //}
+        //public List<Personal> ObtenerPersonal()
+        //{
+        //    return daoTickets.ObtenerPersonal();
+        //}
         
-        public List<Reservas> ObtenerReservas()
-        {
-            return daoTickets.ObtenerReservas();
-        }
+        //public List<Reservas> ObtenerReservas()
+        //{
+        //    return daoTickets.ObtenerReservas();
+        //}
 
     }
 }

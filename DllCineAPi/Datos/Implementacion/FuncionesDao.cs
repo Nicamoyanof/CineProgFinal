@@ -81,7 +81,7 @@ namespace DllCineApi.Datos.Implementacion
 
         public List<Funciones> CargarFunciones()
         {
-            DataTable table = Helper.ObtenerInstancia().ConsultarSQLScript("SELECT * FROM Funciones WHERE DAY(horario) = 01");
+            DataTable table = Helper.ObtenerInstancia().ConsultarSQLScript("SELECT * FROM Funciones ");
 
             List<Funciones> lFunciones = new List<Funciones>();
 

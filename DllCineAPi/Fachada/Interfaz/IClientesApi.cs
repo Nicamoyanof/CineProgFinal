@@ -13,6 +13,7 @@ namespace DllCineApi.Fachada.Interfaz
         public List<Clientes> ObtenerClientes();
         public DataTable CargarSociosPorProvincia();
         public List<Ciudades> CargarCiudades();
+        public Clientes ObtenerClienteById(int id);
         bool Crear(Clientes cliente);
         bool Actualizar(Clientes cliente, int id);
         bool Borrar(int nro);

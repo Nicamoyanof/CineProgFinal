@@ -12,6 +12,7 @@ namespace DllCineApi.Datos.Interfaz
     {
         List<Clientes> ObtenerClientes();
         DataTable CargarSociosPorProvincia();
+        Clientes ObtenerClienteById(int id);
         List<Ciudades> ObtenerCiudades();
         bool Crear(Clientes cliente);
         bool Actualizar(Clientes cliente, int id);

@@ -454,23 +454,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\nicam_hnh7gl4\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\ProyectoCineFinal\\DllCineAPi\\DllCineAPi.csproj",
+      "projectUniqueName": "D:\\Usuario\\Nicanor\\no borrar\\UTN\\1ER AÑO\\2do CUATRIMESTRE\\PROGAMACION II\\proyecto cine\\otro rar mas\\ProyectoCineFinal1.0\\ProyectoCineFinal1\\DllCineAPi\\DllCineAPi.csproj",
       "projectName": "DllCineAPi",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\ProyectoCineFinal\\DllCineAPi\\DllCineAPi.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\ProyectoCineFinal\\DllCineAPi\\obj\\",
+      "projectPath": "D:\\Usuario\\Nicanor\\no borrar\\UTN\\1ER AÑO\\2do CUATRIMESTRE\\PROGAMACION II\\proyecto cine\\otro rar mas\\ProyectoCineFinal1.0\\ProyectoCineFinal1\\DllCineAPi\\DllCineAPi.csproj",
+      "packagesPath": "C:\\Users\\nicam_hnh7gl4\\.nuget\\packages\\",
+      "outputPath": "D:\\Usuario\\Nicanor\\no borrar\\UTN\\1ER AÑO\\2do CUATRIMESTRE\\PROGAMACION II\\proyecto cine\\otro rar mas\\ProyectoCineFinal1.0\\ProyectoCineFinal1\\DllCineAPi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nicam_hnh7gl4\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
