@@ -1,11 +1,11 @@
 PROYECTO CINE PROGRAMACION II
 
 INTEGRANTES:
-Dolfi, Matias;
-Fantini, Gonzalo;
-Moyano, Nicanor;
-Ortiz, Gabriel;
-Perrone, Ian
+ - Dolfi, Matias;
+ - Fantini, Gonzalo;
+ - Moyano, Nicanor;
+ - Ortiz, Gabriel;
+ - Perrone, Ian
 
-# ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ LINK REPORTE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+# ↓↓↓↓↓↓ LINK REPORTE ↓↓↓↓↓↓
 https://github.com/GonzaFantini/Reporte
